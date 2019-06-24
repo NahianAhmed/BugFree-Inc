@@ -1,18 +1,20 @@
 <head>
-
-    <!-- Basic -->
+@php
+use App\Setting;
+$title=Setting::where('field','title')->first();
+@endphp   <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Porto - Responsive HTML5 Template 7.5.0</title>
+    <title>{{$title->values}}</title>
 
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Responsive HTML5 Template">
+    <meta name="keywords" content="{{$title->values}}" />
+    <meta name="description" content="{{$title->values}}">
     <meta name="author" content="Nahian Ahmed">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('public/asset/theme')}}/img/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="{{asset('public/asset/theme')}}/img/apple-touch-icon.png">
+    <!-- <link rel="shortcut icon" href="{{asset('public/asset/theme')}}/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{asset('public/asset/theme')}}/img/apple-touch-icon.png"> -->
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">

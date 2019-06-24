@@ -24,7 +24,7 @@
 
         </div>
 
-        @include('components/footer')
+        @include('components/footer1')
 
     </div>
 

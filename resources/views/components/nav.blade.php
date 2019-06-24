@@ -1,3 +1,12 @@
+@php
+use App\OurProject;
+use App\Setting;
+use App\Services;
+$project=OurProject::all();
+$logo=Setting::where('field','logo')->first();
+$service=Services::all();
+
+@endphp
 <header id="header" class="header-effect-shrink"
     data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
 
@@ -9,7 +18,7 @@
                         <div class="header-logo">
                             <a href="{{url('/')}}">
                                 <img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40"
-                                    src="{{asset('public/asset/theme')}}/img/logo.png">
+                                    src="{{asset($logo->values)}}">
                             </a>
                         </div>
                     </div>
@@ -33,14 +42,11 @@
                                                 Our Services
                                             </a>
                                             <ul class="dropdown-menu">
-
-                                                <li><a class="dropdown-item" href="#">Business Plan</a></li>
-                                                <li><a class="dropdown-item" href="#">Proposal</a></li>
                                                 
-
-
-
-
+                                                @foreach($service as $service)
+                                                <li><a class="dropdown-item" href="{{url('/our-service')}}/{{$service->id}}">{{$service->name}}</a></li>
+                                                @endforeach
+                                                
                                             </ul>
                                         </li>
 
@@ -48,7 +54,7 @@
 
 
                                         <li class="dropdown">
-                                            <a class="dropdown-item" href="#">
+                                            <a class="dropdown-item" href="{{url('our-experts')}}">
                                                 Our Experts
                                             </a>
 
@@ -67,14 +73,10 @@
                                             </a>
                                             <ul class="dropdown-menu">
 
-                                                <li><a class="dropdown-item" href="">
-                                                        Ovijan.com</a></li>
-                                                <li><a class="dropdown-item" href="">Bidya.guru</a>
+                                                 @foreach($project as $project)
+                                                <li><a class="dropdown-item" href="{{url('/our-project')}}/{{$project->id}}">{{$project->title}}</a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="">Rentseba.com</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="">Thinkersfort.com</a>
-                                                </li>
+                                                @endforeach
 
 
 
@@ -87,10 +89,23 @@
 
                                         </li>
                                         <li class="dropdown">
-                                             <a class="dropdown-item" href="#">
+                                             <a class="dropdown-item" href="{{url('/about-us')}}">
                                                About us
                                             </a>
 
+                                        </li>
+                                        <li class="dropdown">
+
+                                        @if(session('UserType'))
+                                             <a class="dropdown-item" href="{{url('/login')}}">
+                                             Dashbord
+                                            </a>
+                                        @else 
+                                            <a class="dropdown-item" href="{{url('/login')}}">
+                                             Login
+                                              
+                                            </a>
+                                         @endif
                                         </li>
 
 
@@ -104,7 +119,7 @@
                                 <i class="fas fa-bars"></i>
                             </button>
                         </div>
-                        <div class="header-nav-features order-1 order-lg-2">
+                        <!-- <div class="header-nav-features order-1 order-lg-2">
                             <div class="header-nav-feature header-nav-features-social-icons d-inline-flex">
                                 <ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean ml-0">
                                     <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank"
@@ -115,7 +130,7 @@
                                             title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

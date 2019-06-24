@@ -2,10 +2,10 @@
 @extends('admin.master')
 @section('body')		
 			
-			<ul class="breadcrumb">
+<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="{{url('/admin-home')}}">Home</a> 
+					<a href="{{url('/Admin-Dashbord')}}">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
 				<li><a href="#">Dashboard</a></li>
@@ -14,7 +14,7 @@
 			<div class="row-fluid">
 				
 				<div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
-					<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
+					<div class="boxchart">5,6,7,2,10,4,2,4,8,2,3,3,2</div>
 					<div class="number">854<i class="icon-arrow-up"></i></div>
 					<div class="title">visits</div>
 					<div class="footer">
@@ -48,49 +48,7 @@
 				
 			</div>		
 
-			<div class="row-fluid">
-				
-				<div class="span8 widget blue" onTablet="span7" onDesktop="span8">
-					
-					<div id="stats-chart2"  style="height:282px" ></div>
-					
-				</div>
-				
-				<div class="sparkLineStats span4 widget green" onTablet="span5" onDesktop="span4">
-
-                    <ul class="unstyled">
-                        
-                        <li><span class="sparkLineStats3"></span> 
-                            Pageviews: 
-                            <span class="number">781</span>
-                        </li>
-                        <li><span class="sparkLineStats4"></span>
-                            Pages / Visit: 
-                            <span class="number">2,19</span>
-                        </li>
-                        <li><span class="sparkLineStats5"></span>
-                            Avg. Visit Duration: 
-                            <span class="number">00:02:58</span>
-                        </li>
-                        <li><span class="sparkLineStats6"></span>
-                            Bounce Rate: <span class="number">59,83%</span>
-                        </li>
-                        <li><span class="sparkLineStats7"></span>
-                            % New Visits: 
-                            <span class="number">70,79%</span>
-                        </li>
-                        <li><span class="sparkLineStats8"></span>
-                            % Returning Visitor: 
-                            <span class="number">29,21%</span>
-                        </li>
-
-                    </ul>
-					
-					<div class="clearfix"></div>
-
-                </div><!-- End .sparkStats -->
-
-			</div>
+			
 			
 			<div class="row-fluid hideInIE8 circleStats">
 				
@@ -222,208 +180,7 @@
 						
 			</div>		
 						
-			<div class="row-fluid">
-				
-				<div class="widget blue span5" onTablet="span6" onDesktop="span5">
-					
-					<h2><span class="glyphicons globe"><i></i></span> Demographics</h2>
-					
-					<hr>
-					
-					<div class="content">
-						
-						<div class="verticalChart">
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>37%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">US</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>16%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">PL</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>12%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">GB</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>9%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">DE</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>7%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">NL</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>6%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">CA</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>5%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">FI</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>4%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">RU</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>3%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">AU</div>
-							
-							</div>
-							
-							<div class="singleBar">
-							
-								<div class="bar">
-								
-									<div class="value">
-										<span>1%</span>
-									</div>
-								
-								</div>
-								
-								<div class="title">N/A</div>
-							
-							</div>	
-							
-							<div class="clearfix"></div>
-							
-						</div>
-					
-					</div>
-					
-				</div><!--/span-->
-				
-				<div class="widget span3 red" onTablet="span6" onDesktop="span3">
-					
-					<h2><span class="glyphicons pie_chart"><i></i></span> Browsers</h2>
-					
-					<hr>
-					
-					<div class="content">
-						
-						<div class="browserStat big">
-							<img src="public/matro/img/browser-chrome-big.png" alt="Chrome">
-							<span>34%</span>
-						</div>
-						<div class="browserStat big">
-							<img src="public/matro/img/browser-firefox-big.png" alt="Firefox">
-							<span>34%</span>
-						</div>
-						<div class="browserStat">
-							<img src="public/matro/img/browser-ie.png" alt="Internet Explorer">
-							<span>34%</span>
-						</div>
-						<div class="browserStat">
-							<img src="public/matro/img/browser-safari.png" alt="Safari">
-							<span>34%</span>
-						</div>
-						<div class="browserStat">
-							<img src="public/matro/img/browser-opera.png" alt="Opera">
-							<span>34%</span>
-						</div>	
-								
-						
-					</div>
-				</div>
-				
-				<div class="widget yellow span4 noMargin" onTablet="span12" onDesktop="span4">
-					<h2><span class="glyphicons fire"><i></i></span> Server Load</h2>
-					<hr>
-					<div class="content">
-						 <div id="serverLoad2" style="height:224px;"></div>
-					</div>
-				</div>
-			
-			</div>
+
 			
 			<div class="row-fluid">
 				
@@ -509,7 +266,7 @@
 						<ul class="dashboard-list metro">
 							<li class="green">
 								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="public/matro/img/avatar.jpg">
+									<img class="avatar" alt="Dennis Ji" src="{{asset('public')}}/matro/img/avatar.jpg">
 								</a>
 								<strong>Name:</strong> Dennis Ji<br>
 								<strong>Since:</strong> Jul 25, 2012 11:09<br>
@@ -517,7 +274,7 @@
 							</li>
 							<li class="yellow">
 								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="public/matro/img/avatar.jpg">
+									<img class="avatar" alt="Dennis Ji" src="{{asset('public')}}/matro/img/avatar.jpg">
 								</a>
 								<strong>Name:</strong> Dennis Ji<br>
 								<strong>Since:</strong> Jul 25, 2012 11:09<br>
@@ -525,7 +282,7 @@
 							</li>
 							<li class="red">
 								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="public/matro/img/avatar.jpg">
+									<img class="avatar" alt="Dennis Ji" src="{{asset('public')}}/matro/img/avatar.jpg">
 								</a>
 								<strong>Name:</strong> Dennis Ji<br>
 								<strong>Since:</strong> Jul 25, 2012 11:09<br>
@@ -533,7 +290,7 @@
 							</li>
 							<li class="blue">
 								<a href="#">
-									<img class="avatar" alt="Dennis Ji" src="public/matro/img/avatar.jpg">
+									<img class="avatar" alt="Dennis Ji" src="{{asset('public')}}/matro/img/avatar.jpg">
 								</a>
 								<strong>Name:</strong> Dennis Ji<br>
 								<strong>Since:</strong> Jul 25, 2012 11:09<br>

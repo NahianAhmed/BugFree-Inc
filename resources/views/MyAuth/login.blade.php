@@ -32,7 +32,7 @@
 
                 <div class="toast mt-3">
                     <div class="toast-header">
-                        login Error
+                        login info
                     </div>
                     <div class="toast-body">
                         {{session('msg')}}

@@ -89,7 +89,7 @@
         </ul>
     </div>
 </div>
-<div class="home-intro mb-0" id="home-intro">
+<!-- <div class="home-intro mb-0" id="home-intro">
     <div class="container">
 
         <div class="row align-items-center">
@@ -110,4 +110,4 @@
         </div>
 
     </div>
-</div>
+</div> -->
